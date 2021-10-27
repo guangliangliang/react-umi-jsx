@@ -1,9 +1,16 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: unicom
+ * @Date: 2021-01-10 15:48:53
+ * @LastEditors: unicom
+ * @LastEditTime: 2021-01-10 16:40:00
+ */
 // https://umijs.org/config/
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
-
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,
@@ -37,7 +44,8 @@ export default defineConfig({
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
   manifest: {
-    basePath: '/',
+    basePath:'/',
   },
+  publicPath: process.env.NODE_ENV === 'production' ? '/react-umi-jsx/' : '/',
   esbuild: {},
 });

@@ -41,3 +41,7 @@
     },
     
     添加 verify-commit.js文件
+
+## 五、添加 全局styles文件 使用只能引入对应的less文件使用
+    添加 /src/styles下面的文件
+    使用时引入文件使用
